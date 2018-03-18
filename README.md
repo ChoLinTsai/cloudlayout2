@@ -1,15 +1,3 @@
-HTML  
-CSS  
-Sass  
-Boostrap3  
-Purifycss  
-Javascript  
-jQuery
-Babel-env  
-Webpack-dev-server  
-Rimraf  
-File-loader  
-Image-webpack-loader  
+## 2018/03/18
 
-Optional:  
-Hot Module Replacement  
+Update template webpack config

@@ -16,7 +16,7 @@ const cssDev = [
   'sass-loader', {
     loader: 'sass-resources-loader',
     options: {
-      resources: './src/css/partials/resources/*.scss'
+      resources: './src/css/resources/*.scss'
     }
   },
   'postcss-loader'
@@ -29,7 +29,7 @@ const cssProd = ExtractTextPlugin.extract({
     'sass-loader', {
       loader: 'sass-resources-loader',
       options: {
-        resources: './src/css/partials/resources/*.scss'
+        resources: './src/css/resources/*.scss'
       }
     },
     'postcss-loader'
@@ -85,24 +85,6 @@ module.exports = {
           }
         ]
       },
-      // {
-      // 	test: /\.(woff2?|svg)$/,
-      // 	loader: 'url-loader?limit=10000&name=fonts/[name].[ext]'
-      // },
-      // {
-      // 	test: /\.(ttf|eot)$/,
-      // 	use: [
-      // 		{
-      // 			loader: 'file-loader',
-      // 			options: {
-      // 				name: '[name].[ext]',
-      // 				publicPath: '../',
-      // 				outputPath: 'fonts/'
-      // 			}
-      // 		}
-      // 	]
-      //   loader: 'file-loader?name=./fonts/[name].[ext]'
-      // },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: [
@@ -141,17 +123,18 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, "./src"),
     compress: true,
-    // hot: true,
+    hot: true,
     stats: "errors-only",
+		watchContentBase: true,
     // open: true,
   },
   plugins: [
-    // new webpack.HotModuleReplacementPlugin(),
-    // new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Webpack Template',
+      title: 'Template Layout',
       template: './src/index.html',
       hash: false,
       minify: {
@@ -160,12 +143,12 @@ module.exports = {
     }),
     new ExtractTextPlugin({
       filename: './css/[name].css',
-      // disable: !isProd,
+      disable: !isProd,
       allChunks: true
     }),
-    new webpack.DefinePlugin({
-      myAPI: JSON.stringify(myEnv.parsed.myAPI)
-    }),
+    // new webpack.DefinePlugin({
+    //   myAPI: JSON.stringify(myEnv.parsed.myAPI)
+    // }),
     // new PurifyCSSPlugin({
     //   paths: glob.sync(path.join(__dirname, 'src/*.html')),
     // }),
