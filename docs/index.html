@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>
+		Template Layout
+	</title>
+<link href="./css/bootstrap.css" rel="stylesheet"><link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+
+	<header>
+		<div id="logo">Cloud</div>
+		<div id="social-icons">
+			<ul>
+				<li>
+					<i class="fa fa-facebook"></i>
+				</li>
+				<li>
+					<i class="fa fa-pinterest"></i>
+				</li>
+				<li>
+					<i class="fa fa-google-plus"></i>
+				</li>
+				<li>
+					<i class="fa fa-twitter"></i>
+				</li>
+			</ul>
+		</div>
+
+		<input type="text" id="search" placeholder="Search">
+
+		<nav id="header-nav">
+			<ul>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-dashboard"></i>
+						<p>Dashboard</p>
+						<i class="point-down fa fa-chevron-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-file-text-o"></i>
+						<p>Pages</p>
+						<i class="point-down fa fa-chevron-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-user"></i>
+						<p>Profiles</p>
+						<i class="point-down fa fa-chevron-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-css3"></i>
+						<p>CSS</p>
+						<i class="point-down fa fa-chevron-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-th"></i>
+						<p>Components</p>
+						<i class="point-down fa fa-chevron-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-check-square-o"></i>
+						<p>Forms</p>
+						<i class="point-down fa fa-chevron-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-table"></i>
+						<p>Tables</p>
+						<i class="point-down fa fa-chevron-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-map"></i>
+						<p>Maps</p>
+						<i class="point-down fa fa-chevron-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-pie-chart"></i>
+						<p>Charts</p>
+						<i class="point-down fa fa-chevron-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-wrench"></i>
+						<p>Settings</p>
+						<i class="point-down fa fa-chevron-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-bell-o"></i>
+						<p>Alerts</p>
+						<i class="point-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-bolt"></i>
+						<p>Modals</p>
+						<i class="point-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-calendar"></i>
+						<p>Calendar</p>
+						<i class="point-down"></i>
+					</li>
+				</a>
+				<a href="#">
+					<li>
+						<i class="nav-icons fa fa-compass"></i>
+						<p>Help</p>
+						<i class="point-down"></i>
+					</li>
+				</a>
+			</ul>
+		</nav>
+
+	</header>
+
+
+
+	<main>
+
+		<aside id="info-panel">
+
+			<div id="info-sales" class="info-card">
+
+				<div id="icon-sales" class="info-icon">
+					<i class="fa fa-money"></i>
+				</div>
+
+				<div id="content-sales" class="info-content">
+					<h6>Sales</h6>
+					<p class="numbers">$2,000</p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+					<p class="desc">Better than last week (25%)</p>
+				</div>
+			</div>
+
+
+			<div id="info-subs" class="info-card">
+
+				<div id="icon-subs" class="info-icon">
+					<i class="fa fa-line-chart"></i>
+				</div>
+
+				<div id="content-subs" class="info-content">
+					<h6>Subscriptions</h6>
+					<p class="numbers">200</p>
+					<div class="progress">
+						<div class="progress-bar bg-dark" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+					<p class="desc">Worse than last week (25%)</p>
+				</div>
+
+			</div>
+
+			<div id="info-traffic" class="info-card">
+
+				<div id="icon-traffic" class="info-icon">
+					<i class="fa fa-pie-chart"></i>
+				</div>
+
+				<div id="content-traffic" class="info-content">
+					<h6>Traffic</h6>
+					<p class="numbers">20,000</p>
+					<div class="progress">
+						<div class="progress-bar bg-dark" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+					<p class="desc">Worse than last week (75%)</p>
+				</div>
+
+			</div>
+
+			<div id="info-organic" class="info-card">
+
+				<div id="icon-organic" class="info-icon">
+					<i class="fa fa-bar-chart"></i>
+				</div>
+
+				<div id="content-organic" class="info-content">
+					<h6>Organic Traffic</h6>
+					<p class="numbers">2,000</p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+					<p class="desc">Better than last week (25%)</p>
+				</div>
+
+			</div>
+
+		</aside>
+
+
+		<section id="dash-panel">
+			<div id="wrap">
+				<h1>Sales</h1>
+				<figure></figure>
+				<div id="dash-content">
+					<div id="dash-details">
+						<h5>Data Range</h5>
+						<select class="custom-select" id="select-1">
+							<option selected="selected">Choose time period</option>
+							<option value="1">7 Days</option>
+							<option value="2">14 Days</option>
+							<option value="3">30 days</option>
+						</select>
+
+						<div id="dash-sales-wrap">
+							<h6>Total Sales : $2000</h6>
+							<i id="sales-help" class="fa fa-question"></i>
+						</div>
+
+						<div id="dash-average-wrap">
+							<h6>Average Sales : $2000</h6>
+							<i id="average-help" class="fa fa-question"></i>
+						</div>
+
+						<div id="custom-date-wrap">
+							<h5>Custom date</h5>
+
+							<div id="input-from-wrap">
+								<label>From</label>
+								<input id="input-from" type="text" placeholder="Selected date">
+							</div>
+
+							<div id="input-to-wrap">
+								<label>To</label>
+								<input id="input-to" type="text" placeholder="Selected date">
+							</div>
+
+
+						</div>
+
+						<div id="dash-change-wrap">
+							<figure id="change-chart"></figure>
+							<div id="dash-change-footer">
+									<div id="change-btn">
+										<h6>Change</h6>
+										<i class="fa fa-arrow-circle-o-down"></i>
+									</div>
+
+									<i id="change-help" class="fa fa-question"></i>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+
+
+<script type="text/javascript" src="./js/bootstrap.bundle.js"></script><script type="text/javascript" src="./js/app.bundle.js"></script></body>
+
+</html>
