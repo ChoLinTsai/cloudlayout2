@@ -1,0 +1,280 @@
+section#dash-panel {
+	@include wh;
+	@include gridColRow(c1, c2, r2, r3);
+	background: #EDEDEE;
+	display: grid;
+	grid-template-columns:
+		[c1] 1fr [c2] 1410px [c3] 1fr
+		[c4];
+	grid-template-rows:
+		[r1] 1fr [r2];
+
+	div#wrap {
+		@include wh;
+		@include gridColRow(c2, c3, r1, r2);
+		display: grid;
+		grid-template-columns:
+			[c1] 30px [c2] 525px [c3] 1fr
+			[c4] 745px [c5] 30px [c6];
+		grid-template-rows:
+			[r1] 20px [r2] 50px [r3] 370px
+			[r4] 1fr [r5];
+		position: relative;
+
+		h1 {
+			@include wh;
+			@include gridColRow(c2, c3, r1, r3);
+			@include flex;
+			background: linear-gradient(45deg, #5EC1FA , #5C7DF2);
+			color: #ffffff;
+			position: relative;
+			z-index: 2;
+			border-radius: 3px;
+			box-shadow: 2px 2px 20px #D0D0D1;
+		}
+		figure {
+			@include wh(normal, 745px, 440px);
+			@include gridColRow(c4, c5, r1, r4);
+			@include bgimg('../img/fig.jpg');
+			position: relative;
+			box-shadow: 2px 2px 20px #D0D0D1;
+			border-radius: 3px;
+			z-index: 2;
+		}
+
+		div#dash-content {
+			@include wh;
+			@include gridColRow(c1, c6, r2, r5);
+			background: #ffffff;
+			position: relative;
+			z-index: 1;
+			border-radius: 3px;
+			box-shadow: 2px 2px 20px #D0D0D1;
+			display: grid;
+			grid-template-columns:
+				[c1] 40px [c2] 510px [c3] 1fr [c4];
+			grid-template-rows:
+				[r1] 75px [r2] 450px [r3] 1fr [r4];
+
+			div#dash-details {
+				@include wh;
+				@include gridColRow(c2, c3, r2, r3);
+				display: grid;
+				grid-template-columns:
+					[c1] 255px [c2] 255px [c3];
+				grid-template-rows:
+					[r1] 70px [r2] 80px [r3] 1fr [r4];
+
+				h5 {
+					@include wh(normal, 100px, 35px);
+					@include gridColRow(c1, c2, r1, r2);
+					@include gridItemPosition(start, center);
+					@include flex;
+					background: #4FAFE3;
+					color: #ffffff;
+					font-size: 0.85rem;
+					box-shadow: 2px 2px 20px #D0D0D1;
+					border-radius: 3px;
+				}
+
+				select#select-1 {
+					@include wh(normal, 100%, 75%);
+					@include gridColRow(c1, c2, r2, r3);
+					border: 0;
+					border-radius: 0;
+					border-bottom: 1px solid #D9D9D9;
+				}
+
+
+				div#dash-sales-wrap {
+					@include wh;
+					@include gridColRow(c2, c3, r1, r2);
+					display: grid;
+					grid-template-columns:
+						[c1] 1fr [c2] 50px [c3];
+					grid-template-rows:
+						[r1] 1fr [r2];
+
+					h6 {
+						@include gridColRow(c1, c2, r1, r2);
+						@include gridItemPosition(end, center);
+					}
+
+					i#sales-help {
+						@include wh(normal, 25px, 30px);
+						@include gridColRow(c2, c3, r1, r2);
+						@include gridItemPosition;
+						@include flex;
+						font-size: 1.5rem;
+						background: #4FAFE3;
+						color: #ffffff;
+						border-radius: 3px;
+					}
+				}
+
+				div#dash-average-wrap {
+					@include wh;
+					@include gridColRow(c2, c3, r2, r3);
+					display: grid;
+					grid-template-columns:
+						[c1] 1fr [c2] 50px [c3];
+					grid-template-rows:
+						[r1] 1fr [r2];
+					h6 {
+						@include gridColRow(c1, c2, r1, r2);
+						@include gridItemPosition(end, center);
+					}
+
+					i#average-help {
+						@include wh(normal, 25px, 30px);
+						@include gridColRow(c2, c3, r1, r2);
+						@include gridItemPosition;
+						@include flex;
+						font-size: 1.5rem;
+						background: #4FAFE3;
+						color: #ffffff;
+						border-radius: 3px;
+					}
+				}
+
+				div#custom-date-wrap {
+					@include wh;
+					@include gridColRow(c1, c2, r3, r4);
+
+					display: grid;
+					grid-template-columns:
+						[c1] 1fr [c2];
+					grid-template-rows:
+						[r1] 65px [r2] 1fr [r3] 1fr [r4];
+
+					h5 {
+						@include wh(normal, 100px, 35px);
+						@include gridColRow(c1, c2, r1, r2);
+						@include gridItemPosition(start, center);
+						@include flex;
+						background: #4FAFE3;
+						color: #ffffff;
+						font-size: 0.85rem;
+						box-shadow: 2px 2px 20px #D0D0D1;
+						border-radius: 3px;
+					}
+
+					div#input-from-wrap {
+						@include wh;
+						@include gridColRow(c1, c2, r2, r3);
+						display: grid;
+						grid-template-columns:
+							[c1] 1fr [c2];
+						grid-template-rows:
+							[r1] 30px [r2] 1fr [r3];
+						color: #bdbdbd;
+
+						label {
+							@include gridColRow(c1, c2, r1, r2);
+						}
+
+						input#input-from {
+							@include wh(normal, 100%, 65%);
+							@include gridColRow(c1, c2, r2, r3);
+							border: 0;
+							border-bottom: 1px solid #D9D9D9;
+							&::placeholder {
+								color: #bdbdbd;
+								font-size: 1rem;
+							}
+						}
+					}
+
+					div#input-to-wrap {
+						@include wh;
+						@include gridColRow(c1, c2, r3, r4);
+						display: grid;
+						grid-template-columns:
+							[c1] 1fr [c2];
+						grid-template-rows:
+							[r1] 30px [r2] 1fr [r3];
+						color: #bdbdbd;
+
+						label {
+							@include gridColRow(c1, c2, r1, r2);
+						}
+
+						input#input-to {
+							@include wh(normal, 100%, 65%);
+							@include gridColRow(c1, c2, r2, r3);
+							border: 0;
+							border-bottom: 1px solid #D9D9D9;
+							&::placeholder {
+								color: #bdbdbd;
+								font-size: 1rem;
+							}
+						}
+					}
+
+
+				}
+
+				div#dash-change-wrap {
+					@include wh;
+					@include gridColRow(c2, c3, r3, r4);
+					display: grid;
+					grid-template-columns:
+						[c1] 1fr [c2];
+					grid-template-rows:
+						[r1] 1fr [r2] 80px [r3];
+
+					figure#change-chart {
+						@include wh(normal, 118px, 118px);
+						@include gridColRow(c1, c2, r1, r2);
+						@include bgimg('../img/change.jpg');
+						@include gridItemPosition;
+						box-shadow: none;
+					}
+
+					div#dash-change-footer {
+						@include wh;
+						@include gridColRow(c1, c2, r2, r3);
+						display: grid;
+						grid-template-columns:
+							[c1] 2fr [c2] 1rem [c3] 1fr [c4];
+						grid-template-rows:
+							[r1] 1fr [r2];
+
+						div#change-btn {
+							@include wh(normal, 75px, 30px);
+							@include gridColRow(c1, c2, r1, r2);
+							@include gridItemPosition(end, center);
+							display: grid;
+							grid-template-columns:
+								[c1] 2fr [c2] 1fr [c3];
+							grid-template-rows:
+								[r1] 1fr [r2];
+							background: #FA5A55;
+							color: #FFFFFF;
+							border-radius: 3px;
+
+							h6 {
+								@include gridItemPosition;
+								font-size: 0.15rem;
+							}
+							i {
+								@include gridItemPosition;
+							}
+						}
+
+						i#change-help {
+							@include wh(normal, 25px, 30px);
+							@include gridColRow(c3, c4, r1, r2);
+							@include gridItemPosition(start,center);
+							@include flex;
+							font-size: 1.5rem;
+							background: #4FAFE3;
+							color: #ffffff;
+							border-radius: 3px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

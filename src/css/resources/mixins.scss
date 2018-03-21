@@ -1,5 +1,5 @@
 /* width and height shorthand */
-@mixin wh($type, $width, $height) {
+@mixin wh($type:normal, $width:100%, $height:100%) {
 	@if $type == "max" {
 		max-width: $width;
 		max-height: $height;
@@ -50,7 +50,7 @@
 	grid-row: [$rowStart] / [$rowEnd];
 }
 /* for background properties */
-@mixin bgimg($url, $repeat, $positionX, $positionY, $size, $attachment:scroll) {
+@mixin bgimg($url, $repeat:no-repeat, $positionX:center, $positionY:center, $size:cover, $attachment:scroll) {
 	background-image: url($url);
 	background-repeat: $repeat;
 	background-position: $positionX $positionY;
@@ -58,12 +58,12 @@
 	background-attachment: $attachment;
 }
 /* flexbox mixin */
-@mixin flex($main, $cross) {
+@mixin flex($main:center, $cross:center) {
 	display: flex;
 	justify-content: $main;
 	align-items: $cross;
 }
-@mixin gridItemPosition($justify, $align) {
+@mixin gridItemPosition($justify:center, $align:center) {
 	justify-self: $justify;
 	align-self: $align;
 }

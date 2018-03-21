@@ -1,0 +1,113 @@
+aside#info-panel {
+	@include wh;
+	@include gridColRow(c1, c2, r1, r2);
+	background: #EDEDEE;
+	display: grid;
+	grid-template-columns: [c1] 1fr [c2] 330px [c3] 30px [c4] 330px [c5] 30px [c6] 330px [c7] 30px [c8] 330px [c9] 1fr [c10];
+	grid-template-rows: [r1] 1fr [r2] 200px [r3] 1fr [r4];
+
+	div.info-card {
+		@include wh;
+		display: grid;
+		grid-template-columns: [c1] 15px [c2] 85px [c3] 1fr [c4];
+		grid-template-rows: [r1] 20px [r2] 65px [r3] 1fr [r4];
+		position: relative;
+
+		div.info-icon {
+			@include wh;
+			@include gridColRow(c2, c3, r1, r3);
+			@include flex;
+			border-radius: 3px;
+			position: relative;
+			box-shadow: 2px 2px 10px #D0D0D1;
+			z-index: 2;
+
+			i {
+				font-size: 2rem;
+				color: #fff;
+			}
+		}
+
+		div.info-content {
+			@include wh;
+			@include gridColRow(c1, c4, r2, r4);
+			background: #FFFFFF;
+			border-radius: 3px;
+			position: relative;
+			z-index: 1;
+			box-shadow: 2px 2px 10px #D0D0D1;
+			display: grid;
+			grid-template-columns: [c1] 15px [c2] 1fr [c3] 15px [c4];
+			grid-template-rows: [r1] 40px [r2] 50px [r3] 40px [r4] 50px [r5];
+
+			h6 {
+				@include gridColRow(c2, c3, r1, r2);
+				@include gridItemPosition(end, center);
+				text-transform: uppercase;
+				font-size: 0.8rem;
+				color: #A6AEC1;
+			}
+
+			p.numbers {
+				@include gridColRow(c2, c3, r2, r3);
+				@include gridItemPosition(end, center);
+				font-size: 2rem;
+			}
+
+			div.progress {
+				@include wh(normal, 100%, 5px);
+				@include gridColRow(c2, c3, r3, r4);
+				@include gridItemPosition;
+			}
+
+			p.desc {
+				@include gridColRow(c2, c3, r4, r5);
+				@include gridItemPosition(start,start);
+				font-size: 1rem;
+				color: #A6AEC1;
+			}
+		}
+	}
+
+	div#info-sales {
+		@include gridColRow(c2, c3, r2, r3);
+
+		div#icon-sales {
+			background: #5C7BF2;
+		}
+
+		div#content-sales {
+			h6 {}
+		}
+	}
+
+	div#info-subs {
+		@include gridColRow(c4, c5, r2, r3);
+
+		div#icon-subs {
+			background: #F8BF40;
+		}
+
+		div#content-subs {}
+	}
+
+	div#info-traffic {
+		@include gridColRow(c6, c7, r2, r3);
+
+		div#icon-traffic {
+			background: #4EAFF4;
+		}
+
+		div#content-traffic {}
+	}
+
+	div#info-organic {
+		@include gridColRow(c8, c9, r2, r3);
+
+		div#icon-organic {
+			background: #FA5A55;
+		}
+
+		div#content-organic {}
+	}
+}

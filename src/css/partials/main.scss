@@ -1,0 +1,7 @@
+main {
+	@include wh;
+	@include gridColRow(c2, c3, r1, r2);
+	display: grid;
+	grid-template-columns: [c1] 1fr [c2];
+	grid-template-rows: [r1] 400px [r2] 1fr [r3];
+}
