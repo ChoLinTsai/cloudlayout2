@@ -6,10 +6,8 @@ body {
 	@include wh(normal, 100vw, 100vh);
 	font-family: 'roboto-bold';
 	display: grid;
-	grid-template-columns:
-		[c1] 250px [c2] 1fr [c3];
-	grid-template-rows:
-		[r1] 1fr [r2];
+	grid-template-columns: [c1] 250px [c2] 1fr [c3];
+	grid-template-rows: [r1] 1fr [r2];
 }
 
 figure,
@@ -19,8 +17,8 @@ h3,
 h4,
 h5,
 h6,
-p,
-label {
+label,
+p {
 	margin: 0;
 	padding: 0;
 }

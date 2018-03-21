@@ -3,22 +3,15 @@ section#dash-panel {
 	@include gridColRow(c1, c2, r2, r3);
 	background: #EDEDEE;
 	display: grid;
-	grid-template-columns:
-		[c1] 1fr [c2] 1410px [c3] 1fr
-		[c4];
-	grid-template-rows:
-		[r1] 1fr [r2];
+	grid-template-columns: [c1] 1fr [c2] 1410px [c3] 1fr [c4];
+	grid-template-rows: [r1] 1fr [r2];
 
 	div#wrap {
 		@include wh;
 		@include gridColRow(c2, c3, r1, r2);
 		display: grid;
-		grid-template-columns:
-			[c1] 30px [c2] 525px [c3] 1fr
-			[c4] 745px [c5] 30px [c6];
-		grid-template-rows:
-			[r1] 20px [r2] 50px [r3] 370px
-			[r4] 1fr [r5];
+		grid-template-columns: [c1] 30px [c2] 525px [c3] 1fr [c4] 745px [c5] 30px [c6];
+		grid-template-rows: [r1] 20px [r2] 50px [r3] 370px [r4] 1fr [r5];
 		position: relative;
 
 		h1 {
@@ -32,6 +25,7 @@ section#dash-panel {
 			border-radius: 3px;
 			box-shadow: 2px 2px 20px #D0D0D1;
 		}
+
 		figure {
 			@include wh(normal, 745px, 440px);
 			@include gridColRow(c4, c5, r1, r4);
@@ -51,19 +45,15 @@ section#dash-panel {
 			border-radius: 3px;
 			box-shadow: 2px 2px 20px #D0D0D1;
 			display: grid;
-			grid-template-columns:
-				[c1] 40px [c2] 510px [c3] 1fr [c4];
-			grid-template-rows:
-				[r1] 75px [r2] 450px [r3] 1fr [r4];
+			grid-template-columns: [c1] 40px [c2] 510px [c3] 1fr [c4];
+			grid-template-rows: [r1] 75px [r2] 450px [r3] 1fr [r4];
 
 			div#dash-details {
 				@include wh;
 				@include gridColRow(c2, c3, r2, r3);
 				display: grid;
-				grid-template-columns:
-					[c1] 255px [c2] 255px [c3];
-				grid-template-rows:
-					[r1] 70px [r2] 80px [r3] 1fr [r4];
+				grid-template-columns: [c1] 255px [c2] 255px [c3];
+				grid-template-rows: [r1] 70px [r2] 80px [r3] 1fr [r4];
 
 				h5 {
 					@include wh(normal, 100px, 35px);
@@ -85,15 +75,12 @@ section#dash-panel {
 					border-bottom: 1px solid #D9D9D9;
 				}
 
-
 				div#dash-sales-wrap {
 					@include wh;
 					@include gridColRow(c2, c3, r1, r2);
 					display: grid;
-					grid-template-columns:
-						[c1] 1fr [c2] 50px [c3];
-					grid-template-rows:
-						[r1] 1fr [r2];
+					grid-template-columns: [c1] 1fr [c2] 50px [c3];
+					grid-template-rows: [r1] 1fr [r2];
 
 					h6 {
 						@include gridColRow(c1, c2, r1, r2);
@@ -116,10 +103,9 @@ section#dash-panel {
 					@include wh;
 					@include gridColRow(c2, c3, r2, r3);
 					display: grid;
-					grid-template-columns:
-						[c1] 1fr [c2] 50px [c3];
-					grid-template-rows:
-						[r1] 1fr [r2];
+					grid-template-columns: [c1] 1fr [c2] 50px [c3];
+					grid-template-rows: [r1] 1fr [r2];
+
 					h6 {
 						@include gridColRow(c1, c2, r1, r2);
 						@include gridItemPosition(end, center);
@@ -140,12 +126,9 @@ section#dash-panel {
 				div#custom-date-wrap {
 					@include wh;
 					@include gridColRow(c1, c2, r3, r4);
-
 					display: grid;
-					grid-template-columns:
-						[c1] 1fr [c2];
-					grid-template-rows:
-						[r1] 65px [r2] 1fr [r3] 1fr [r4];
+					grid-template-columns: [c1] 1fr [c2];
+					grid-template-rows: [r1] 65px [r2] 1fr [r3] 1fr [r4];
 
 					h5 {
 						@include wh(normal, 100px, 35px);
@@ -163,10 +146,8 @@ section#dash-panel {
 						@include wh;
 						@include gridColRow(c1, c2, r2, r3);
 						display: grid;
-						grid-template-columns:
-							[c1] 1fr [c2];
-						grid-template-rows:
-							[r1] 30px [r2] 1fr [r3];
+						grid-template-columns: [c1] 1fr [c2];
+						grid-template-rows: [r1] 30px [r2] 1fr [r3];
 						color: #bdbdbd;
 
 						label {
@@ -178,6 +159,7 @@ section#dash-panel {
 							@include gridColRow(c1, c2, r2, r3);
 							border: 0;
 							border-bottom: 1px solid #D9D9D9;
+
 							&::placeholder {
 								color: #bdbdbd;
 								font-size: 1rem;
@@ -189,10 +171,8 @@ section#dash-panel {
 						@include wh;
 						@include gridColRow(c1, c2, r3, r4);
 						display: grid;
-						grid-template-columns:
-							[c1] 1fr [c2];
-						grid-template-rows:
-							[r1] 30px [r2] 1fr [r3];
+						grid-template-columns: [c1] 1fr [c2];
+						grid-template-rows: [r1] 30px [r2] 1fr [r3];
 						color: #bdbdbd;
 
 						label {
@@ -204,24 +184,21 @@ section#dash-panel {
 							@include gridColRow(c1, c2, r2, r3);
 							border: 0;
 							border-bottom: 1px solid #D9D9D9;
+
 							&::placeholder {
 								color: #bdbdbd;
 								font-size: 1rem;
 							}
 						}
 					}
-
-
 				}
 
 				div#dash-change-wrap {
 					@include wh;
 					@include gridColRow(c2, c3, r3, r4);
 					display: grid;
-					grid-template-columns:
-						[c1] 1fr [c2];
-					grid-template-rows:
-						[r1] 1fr [r2] 80px [r3];
+					grid-template-columns: [c1] 1fr [c2];
+					grid-template-rows: [r1] 1fr [r2] 80px [r3];
 
 					figure#change-chart {
 						@include wh(normal, 118px, 118px);
@@ -235,20 +212,16 @@ section#dash-panel {
 						@include wh;
 						@include gridColRow(c1, c2, r2, r3);
 						display: grid;
-						grid-template-columns:
-							[c1] 2fr [c2] 1rem [c3] 1fr [c4];
-						grid-template-rows:
-							[r1] 1fr [r2];
+						grid-template-columns: [c1] 2fr [c2] 1rem [c3] 1fr [c4];
+						grid-template-rows: [r1] 1fr [r2];
 
 						div#change-btn {
 							@include wh(normal, 75px, 30px);
 							@include gridColRow(c1, c2, r1, r2);
 							@include gridItemPosition(end, center);
 							display: grid;
-							grid-template-columns:
-								[c1] 2fr [c2] 1fr [c3];
-							grid-template-rows:
-								[r1] 1fr [r2];
+							grid-template-columns: [c1] 2fr [c2] 1fr [c3];
+							grid-template-rows: [r1] 1fr [r2];
 							background: #FA5A55;
 							color: #FFFFFF;
 							border-radius: 3px;
@@ -257,6 +230,7 @@ section#dash-panel {
 								@include gridItemPosition;
 								font-size: 0.15rem;
 							}
+
 							i {
 								@include gridItemPosition;
 							}

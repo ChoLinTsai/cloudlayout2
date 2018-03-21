@@ -3,11 +3,8 @@ header {
 	@include gridColRow(c1, c2, r1, r2);
 	background: #F9F9F9;
 	display: grid;
-	grid-template-columns:
-		[c1] 250px [c2];
-	grid-template-rows:
-		[r1] 85px [r2] 55px [r3] 55px
-		[r4] 1fr [r5];
+	grid-template-columns: [c1] 250px [c2];
+	grid-template-rows: [r1] 85px [r2] 55px [r3] 55px [r4] 1fr [r5];
 
 	div#logo {
 		@include wh;
@@ -21,9 +18,11 @@ header {
 	div#social-icons {
 		@include wh;
 		@include gridColRow(c1, c2, r2, r3);
+
 		ul {
 			@include wh;
 			@include flex;
+
 			li {
 				margin: 0 0.5rem;
 			}
@@ -39,6 +38,7 @@ header {
 		border-bottom: 2px solid #eeeeee;
 		border-right: 0;
 		border-left: 0;
+
 		&::placeholder {
 			font-size: 1rem;
 			color: #bdbdbd;
@@ -49,19 +49,20 @@ header {
 		@include wh;
 		@include gridColRow(c1, c2, r4, r5);
 		padding-top: 1rem;
+
 		ul {
 			@include wh;
 			display: grid;
-			grid-template-columns:
-				[c1] 1fr [c2];
-			grid-template-rows:
-			  repeat(14, 45px);
+			grid-template-columns: [c1] 1fr [c2];
+			grid-template-rows: repeat(14, 45px);
 
 			a {
 				@include wh;
 				text-decoration: none;
+
 				&:hover {
 					background: #33b5e5;
+
 					li {
 						color: #fdfdfd;
 					}
@@ -71,11 +72,8 @@ header {
 					@include wh;
 					color: #333;
 					display: grid;
-					grid-template-columns:
-						[c1] 1rem [c2] 45px [c3] 1fr
-						[c4] 45px [c5] 1rem [c6];
-					grid-template-rows:
-						[r1] 1fr [r2];
+					grid-template-columns: [c1] 1rem [c2] 45px [c3] 1fr [c4] 45px [c5] 1rem [c6];
+					grid-template-rows: [r1] 1fr [r2];
 
 					i.nav-icons {
 						@include gridColRow(c2, c3, r1, r2);
